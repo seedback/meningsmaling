@@ -15,6 +15,7 @@ function loginView() {
 <input onchange="setPassword(this.value)" type="text" placeholder="Passord"/>
 <br/>
 <button onclick="login()">Logg inn</button>
+<input placeholder="HVA SA DU BØHLER?"/>
     `;
 
     document.getElementById('app').innerHTML = html;
