@@ -68,5 +68,6 @@ const model = {
 			],
 			isEnded: false,
 		}
+		
 	],
 }
