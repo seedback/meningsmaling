@@ -1,0 +1,17 @@
+.questionTextBox{
+	width: 500px;
+	height: 50px;
+	max-width: calc(100vw - 150px);
+	font-size: 40px;
+}
+
+.textboxAlternative{
+	background-color: #ccc;
+}
+
+.userButton{
+	position: fixed;
+	width: 100px;
+	right: 8px;
+	top: 8px;
+}

@@ -4,8 +4,8 @@ const model = {
 		// if userID != null make poll
 		// if pollID != null show poll
 		// if neither is null show admin page for poll (results)
-		userID: null,
-		pollID: null,
+		userID: "Team3",
+		pollID: 0,
 		page: "login", // login or poll
 	},
 
@@ -19,7 +19,15 @@ const model = {
 			title: "",
 			alternatives: [
 				{
-					type: null,
+					type: 0,
+					name: "",
+				},
+				{
+					type: 0,
+					name: "",
+				},
+				{
+					type: 1,
 					name: "",
 				},
 			],
@@ -29,14 +37,32 @@ const model = {
 	// 3: felles data
 	polls: [
 		{
-			ID: null,
-			userID: null,
-			title: "",
+			ID: 0,
+			userID: "Team3",
+			title: "Hvilket team er best?",
 			alternatives: [
 				{
-					type: null, // 0 is radioButton, 1 is textbox
-					name: "",
-					numVotes: null,
+					type: 0, // 0 is radioButton, 1 is textbox
+					name: "Team 1",
+					numVotes: 0,
+					textboxAnswers: [],
+				},
+				{
+					type: 0, // 0 is radioButton, 1 is textbox
+					name: "Team 2",
+					numVotes: 0,
+					textboxAnswers: [],
+				},
+				{
+					type: 0, // 0 is radioButton, 1 is textbox
+					name: "Team 3",
+					numVotes: 0,
+					textboxAnswers: [],
+				},
+				{
+					type: 1, // 0 is radioButton, 1 is textbox
+					name: "Annet",
+					numVotes: 0,
 					textboxAnswers: [],
 				},
 			],
