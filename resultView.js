@@ -2,7 +2,7 @@
     // [ ] Show number of answers
     // [ ] Show alternatives with number of times chosen
     // [ ] Create end/download button
-    // [ ] Create logout button
+    // [√] Create logout button
 function resultView() {
     let html = "";
 
@@ -16,8 +16,15 @@ function resultView() {
 
     //Vis titelen
     html += /*html*/ `
-    <div>${(model.polls[curPollId].title)}</div>
+    <h1>${(model.polls[curPollId].title)}</h1>
+    <!--Antall deltagere-->
+    <div>${''}</div>
     `;
+
+    //+ eventuelt download
+    html += /*html*/ `<button onclick="endPoll()">End</button>`;
+
+    html += `<button class="userButton" onclick="logOut()">${model.app.userID}</button>`;
 
     document.getElementById("app").innerHTML = html;
 }
