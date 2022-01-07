@@ -15,3 +15,11 @@
 	right: 8px;
 	top: 8px;
 }
+
+.textboxAnswerBG{
+	width: 200px;
+	height: fit-content;
+
+	background-color: #bbb;
+	border: solid 1px #777
+}

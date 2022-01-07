@@ -44,29 +44,34 @@ const model = {
 				{
 					type: 0, // 0 is radioButton, 1 is textbox
 					name: "Team 1",
-					numVotes: 0,
+					numVotes: 2,
 					textboxAnswers: [],
+					textboxAnswersNum: []
 				},
 				{
 					type: 0, // 0 is radioButton, 1 is textbox
 					name: "Team 2",
-					numVotes: 0,
+					numVotes: 3,
 					textboxAnswers: [],
+					textboxAnswersNum: []
 				},
 				{
 					type: 0, // 0 is radioButton, 1 is textbox
 					name: "Team 3",
-					numVotes: 0,
+					numVotes: 7,
 					textboxAnswers: [],
+					textboxAnswersNum: []
 				},
 				{
 					type: 1, // 0 is radioButton, 1 is textbox
 					name: "Annet",
-					numVotes: 0,
-					textboxAnswers: [],
+					numVotes: 3,
+					textboxAnswers: ["Lærerne", "Alumni"],
+					textboxAnswersNum: [2, 1]
 				},
 			],
 			isEnded: false,
 		}
+		
 	],
 }
