@@ -72,5 +72,6 @@ function finishPoll() {
 		showTypeDropdown: false,
 	}
 
-		updateView();
+	model.app.page = "newpoll";
+	updateView();
 }
