@@ -23,3 +23,14 @@
 	background-color: #bbb;
 	border: solid 1px #777
 }
+
+.typeDropdown{
+	width: 200px;
+	height: fit-content;
+	background-color: #ddd;
+	border: solid 1px #777
+}
+
+.typeDropdown > hr{
+	margin: 0px;
+}

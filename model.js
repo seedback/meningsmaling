@@ -5,8 +5,8 @@ const model = {
 		// if pollID != null show poll
 		// if neither is null show admin page for poll (results)
 		userID: "Team3",
-		pollID: 0,
-		page: "login", // login or poll
+		pollID: null,
+		page: "poll", // login or poll or newpoll
 	},
 
 	// 2: inputfelter til hver side
@@ -23,14 +23,11 @@ const model = {
 					name: "",
 				},
 				{
-					type: 0,
-					name: "",
-				},
-				{
 					type: 1,
 					name: "",
 				},
 			],
+			showTypeDropdown: false,
 		},
 	},
 

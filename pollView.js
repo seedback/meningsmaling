@@ -21,7 +21,7 @@ function pollView() {
 		console.log('model.polls[curAppID].alternatives.name')
 		if (model.polls[curAppID].alternatives[i].type == 0) {
 			html += /*html*/ `
-				<input class="answer" type="checkbox">
+				<input class="answer" type="radio" name="radio">
 				${model.polls[curAppID].alternatives[i].name}
 				<br/>
 				`;
@@ -33,7 +33,6 @@ function pollView() {
 				<input class="answer" type="text" placeholder="${model.polls[curAppID].alternatives[i].name}">
 				`;
 		}
-
 	}
 
 	html += /*html*/ `

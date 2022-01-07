@@ -5,11 +5,10 @@
     // [√] Create logout button
 function resultView() {
     let html = "";
-
+		let curPoll = null;
 		let totalVotes = 0;
 
-    //Finner riktig pollId
-    let curPoll = null;
+    //Finner riktig poll
     for (let i = 0; i < model.polls.length; i++) {
         if (model.app.pollID === model.polls[i].ID) {
             curPoll = model.polls[i];
