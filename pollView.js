@@ -4,30 +4,48 @@
 // [√] Create login button
 
 function pollView() {
-    let html = "";
+	let html = "";
 
-        let curAppID = null;
-        for(let i = 0; i < model.polls.length; i++) {
-            if(model.polls[i].ID == model.app.pollID) {
-                curAppID = i;
-                }
-            }
+	let curAppID = null;
+	for (let i = 0; i < model.polls.length; i++) {
+		if (model.polls[i].ID == model.app.pollID) {
+			curAppID = i;
+		}
+	}
 
-            html += /*html*/ `
-                <div>${model.polls[curAppID].title}</div>
-            `;
+	html += /*html*/ `
+		<div><h2>${model.polls[curAppID].title}</h2></div>
+		`;
 
-        for(let i = 0; i < model.polls[curAppID].alternatives.length; i++){
-            console.log('model.polls[curAppID].alternatives.name')
-            html += /*html*/ `
-                <input type="${model.polls[curAppID].alternatives.type}">
-                <div>${model.polls[curAppID].alternatives[i].name}</div>
+	for (let i = 0; i < model.polls[curAppID].alternatives.length; i++) {
+		console.log('model.polls[curAppID].alternatives.name')
+		if (model.polls[curAppID].alternatives[i].type == 0) {
+			html += /*html*/ `
+				<input class="answer" type="checkbox">
+				${model.polls[curAppID].alternatives[i].name}
+				<br/>
+				`;
+		}
+		else if (model.polls[curAppID].alternatives[i].type == 1) {
+			html += /*html*/ `
+				${model.polls[curAppID].alternatives[i].name}
+				<br/>
+				<input class="answer" type="text" placeholder="${model.polls[curAppID].alternatives[i].name}">
+				`;
+		}
 
-        `;}
-            html += /*html*/ `
-                <button class="userButton" onclick="logOut()">${model.app.page}</button>
-            `;
-    
+	}
 
-    document.getElementById('app').innerHTML = html;
+	html += /*html*/ `
+		<br/>
+		<br/>
+		<button class="answerButton" onclick="submitAnswer()">Submit</button>
+		`;
+
+	html += /*html*/ `
+		<button class="userButton" onclick="logIn()">Log In</button>
+		`;
+
+
+	document.getElementById('app').innerHTML = html;
 }
