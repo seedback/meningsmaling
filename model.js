@@ -5,7 +5,7 @@ const model = {
 		// if pollID != null show poll
 		// if neither is null show admin page for poll (results)
 		userID: "Team3",
-		pollID: null,
+		pollID: 0,
 		page: "poll", // login or poll or newpoll
 	},
 

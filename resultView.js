@@ -62,12 +62,12 @@ function resultView() {
 
 		if(!curPoll.isEnded){
 			html += /*html*/ `
-				<button onclick="endPoll(curPoll.ID)">End Poll</button>
+				<button onclick="endPoll(${curPoll.ID})">End Poll</button>
 				`
 		}
 		else{
 			html += /*html*/ `
-				<button onclick="downloadPoll(curPoll.ID)">Download</button>
+				<button onclick="downloadPoll(${curPoll.ID})">Download</button>
 				`
 		}
 
